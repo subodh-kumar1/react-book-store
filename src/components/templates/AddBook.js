@@ -1,6 +1,7 @@
 import { Button } from "@material-ui/core"
 import { TextField } from "@material-ui/core"
 import { Typography, Container } from "@material-ui/core"
+import Title from "../atoms/Title"
 
 const AddBook = (props) => {
     const {addBook} = props
@@ -18,6 +19,7 @@ const AddBook = (props) => {
         //console.log(bookTitle + ' ' + genre + ' ' + author);
     }
     return <Container maxWidth='xl'>
+        <Title title='Add Book'/>
         <TextField placeholder='Book Name' fullWidth id={0}/>
         <br/>
         <TextField  placeholder='Book Genre' fullWidth  id={1}/>
