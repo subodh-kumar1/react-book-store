@@ -1,4 +1,4 @@
-import { Container, Grid, Tabs, Tab, Typography } from "@material-ui/core"
+import { Container, Grid, Tabs, Tab } from "@material-ui/core"
 import MyCard from "../organisms/MyCard"
 import {useState} from 'react';
 import Title from "../atoms/Title";
@@ -31,8 +31,8 @@ const BookHome = (props) => {
     return <Container maxWidth='xl'>
         <Title title='My Book Library'/>
         <Tabs onChange={handleChange} value={value} textColor='primary' indicatorColor='primary'>
-            <Tab label='Currently Reading' value={0} style={value!=0?{color:'#ffffff'}:{color:'#00ff00'}}/>
-            <Tab label='Finished' value={1} style={value!=1?{color:'#ffffff'}:{color:'#00ff00'}}/>
+            <Tab label='Currently Reading' value={0} style={value !== 0?{color:'#ffffff'}:{color:'#00ff00'}}/>
+            <Tab label='Finished' value={1} style={value !== 1?{color:'#ffffff'}:{color:'#00ff00'}}/>
         </Tabs>
         <Grid container>
             {cardArray}

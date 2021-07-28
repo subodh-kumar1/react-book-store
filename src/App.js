@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import theme from './themefile';
 import {ThemeProvider} from '@material-ui/styles'
