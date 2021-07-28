@@ -1,9 +1,9 @@
 import { Container, Grid, Tabs, Tab, Typography } from "@material-ui/core"
 import MyCard from "../organisms/MyCard"
 import {useState} from 'react';
-import books from "../../commons/books";
 import Title from "../atoms/Title";
-const BookHome = () => {
+const BookHome = (props) => {
+    const {books} = props;
     const [value, setValue] = useState(0);
     const [bookList, setBookList] = useState(books.filter(book => book.isReading));
 
@@ -28,7 +28,7 @@ const BookHome = () => {
             }
           ))
       }
-    return <Container maxWidth='md'>
+    return <Container maxWidth='xl'>
         <Title title='My Book Library'/>
         <Tabs onChange={handleChange} value={value} textColor='primary' indicatorColor='primary'>
             <Tab label='Currently Reading' value={0} style={value!=0?{color:'#ffffff'}:{color:'#00ff00'}}/>
